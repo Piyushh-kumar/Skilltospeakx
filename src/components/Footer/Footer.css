@@ -1,0 +1,163 @@
+/* ===== DARK BLUE FOOTER ===== */
+.footer {
+  background-color: #050824;  /* Dark blue background */
+  color: #ffffff;            /* White text */
+  padding: 3rem 2rem 1rem;
+  font-family: 'Arial', sans-serif;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle light border */
+}
+
+/* Container & Grid Layout */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Footer Sections */
+.footer-section {
+  margin-bottom: 2rem;
+}
+
+/* Logo Section */
+.logo-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.footer-logo-img {
+  width: 50px; /* Adjust as needed */
+  height: auto;
+  margin-right: 15px;
+  border-radius: 4px; /* Optional: if you want rounded corners */
+}
+
+/* Logo & Description */
+.footer-logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ffffff;            /* White logo text */
+  margin: 0; /* Remove default margin */
+}
+
+.footer-description {
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  text-align: left;
+}
+
+/* Headings */
+.footer-heading {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  color: #ffffff;            /* White headings */
+  font-weight: 600;
+}
+
+/* Links Styling */
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a,
+.footer-contact a {
+  color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+  color: #64b5f6;           /* Light blue hover */
+}
+
+/* Newsletter Form */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-input {
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 4px;
+  font-size: 1rem;
+  color: white;
+}
+
+.email-input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.checkbox-input {
+  margin-right: 0.5rem;
+}
+
+.subscribe-btn {
+  background-color: #64b5f6;  /* Light blue button */
+  color: #0d47a1;            /* Dark blue text */
+  border: none;
+  padding: 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover {
+  background-color: #42a5f5;  /* Brighter blue on hover */
+}
+
+/* Footer Bottom (Copyright) */
+.footer-bottom {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-section {
+    margin-bottom: 1.5rem;
+  }
+  
+  .logo-container {
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .footer-description {
+    text-align: center;
+  }
+}

@@ -1,0 +1,96 @@
+/* FoundersNote.css */
+.founders-note-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: #2c3e50;
+}
+
+.note-card {
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.note-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.signature {
+  margin-top: 3rem;
+  text-align: right;
+}
+
+.signature-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2c3e50;
+  font-style: italic;
+  position: relative;
+  display: inline-block;
+  padding-right: 2rem;
+}
+
+.signature-name::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 1.5rem;
+  height: 2px;
+  background-color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .note-card {
+    padding: 2rem;
+  }
+  
+  .note-text {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .founders-note-page {
+    padding: 2rem 0;
+  }
+  
+  .page-title {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+  
+  .note-card {
+    padding: 1.5rem;
+  }
+  
+  .signature-name {
+    font-size: 1.1rem;
+  }
+}

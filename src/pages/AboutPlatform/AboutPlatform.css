@@ -1,0 +1,116 @@
+.about-platform {
+  padding: 4rem 1.5rem;
+  background-color: #f8f9fa;
+}
+
+.platform-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.platform-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.section-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  margin-bottom: 1.25rem;
+  color: #333;
+  line-height: 1.3;
+}
+
+.platform-description {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #555;
+}
+
+.platform-features {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap; /* Allow items to wrap to next line */
+  justify-content: flex-start; /* Or use 'center' for centered layout */
+  padding-bottom: 0; /* Remove scrollbar space */
+}
+
+.feature {
+  flex: 1; /* Distribute space equally */
+  min-width: 150px; /* Minimum width for each feature */
+  max-width: 200px; /* Maximum width for each feature */
+  text-align: center;
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 1rem;
+}
+
+.platform-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.platform-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  object-fit: cover;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .platform-container {
+    gap: 2.5rem;
+  }
+  
+  .feature {
+    min-width: 140px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .about-platform {
+    padding: 3rem 1rem;
+  }
+  
+  .platform-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  .platform-features {
+    gap: 1rem;
+  }
+  
+  .feature {
+    min-width: calc(50% - 1rem); /* 2 items per row */
+    max-width: calc(50% - 1rem);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .feature {
+    min-width: 100%; /* 1 item per row */
+    max-width: 100%;
+  }
+  
+  .feature-icon {
+    width: 40px;
+    height: 40px;
+  }
+}

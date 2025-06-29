@@ -105,16 +105,25 @@ function Features() {
     };
   }, [isMobile, features.length]);
 
-  // Scroll to current index
+  // Scroll to current index - UPDATED TO PREVENT PAGE JUMPING
   useEffect(() => {
-    if (!isMobile) return;
+    if (!isMobile || !containerRef.current) return;
     
+    const carousel = containerRef.current;
     const card = featureRefs.current[currentIndex];
     if (card) {
-      card.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-        inline: 'center'
+      // Calculate the scroll position relative to the carousel container
+      const cardLeft = card.offsetLeft;
+      const cardWidth = card.offsetWidth;
+      const containerWidth = carousel.offsetWidth;
+      
+      // Calculate the scroll position to center the card
+      const scrollTo = cardLeft - (containerWidth / 2) + (cardWidth / 2);
+      
+      // Smooth scroll within the carousel container only
+      carousel.scrollTo({
+        left: scrollTo,
+        behavior: 'smooth'
       });
     }
   }, [currentIndex, isMobile]);

@@ -6,22 +6,25 @@
   top: 0;
   z-index: 1000;
   width: 100%;
+  height: 90px;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 1600px;
   margin: 0 auto;
   padding: 1rem 2rem;
   position: relative;
+  margin-left: 3% ;
 }
 
-/* Logo Section */
+/* Logo Section - Updated to push to far left */
 .logo-container {
   display: flex;
   align-items: center;
+  margin-right: auto; /* This pushes everything else to the right */
 }
 
 .logo-link {
@@ -51,11 +54,12 @@
   color: #0066ff;
 }
 
-/* Navigation Links */
+/* Navigation Links - Updated to be pushed to the right */
 .nav-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 5.5rem;
   align-items: center;
+  margin-left: auto; /* This pushes nav links to the right */
 }
 
 .nav-links a {
@@ -87,7 +91,7 @@
   width: 100%;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu - Positioned to the right */
 .hamburger {
   display: none;
   background: none;
@@ -95,6 +99,7 @@
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1001;
+  margin-left: auto; /* Ensures it stays on the right */
 }
 
 .hamburger span {
@@ -107,6 +112,7 @@
   border-radius: 3px;
 }
 
+/* Rest of your existing styles remain the same */
 .hamburger.active span {
   background-color: #0066ff;
 }
@@ -134,7 +140,7 @@
   z-index: 999;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 
 .sidebar-overlay.open {
@@ -152,6 +158,13 @@
 @media (max-width: 768px) {
   .header-container {
     padding: 1rem;
+    max-width: 800px;
+   
+  }
+
+  .logo-container {
+    max-width: fit-content;
+    
   }
   
   .nav-links {
@@ -160,6 +173,7 @@
 
   .hamburger {
     display: block;
+   
   }
   
   .brand-name {
@@ -177,18 +191,11 @@
   }
   
   .logo-image {
-    height: 35px;
+    height: 45px;
   }
 }
 
-
-
-
-
-
-
-
-/* Header Container */
+/* Transparent Header Styles */
 .header {
   position: fixed;
   top: 0;
@@ -198,6 +205,7 @@
   transition: all 0.4s ease;
   background-color: transparent;
   box-shadow: none;
+  height: 70px ;
 }
 
 .header.scrolled {
@@ -215,32 +223,5 @@
 .light-hamburger span {
   background-color: white !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* Rest of your existing header styles remain the same */
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-  position: relative;
-}
-
-/* ... keep all your other existing CSS rules ... */
-
-
-
-
-/* Add this to your Hero.css */
-.hero {
-  /* Your existing hero styles */
-  padding-top: 80px; /* Make space for the fixed header */
-  box-sizing: border-box;
-}
-
-/* If you have any content right after hero that might get hidden */
-.content-after-hero {
-  margin-top: 80px; /* Same as header height */
+  margin-top: auto;
 }

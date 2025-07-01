@@ -4,7 +4,6 @@
   color: #ffffff;
   padding: 4rem 2rem 0;
   font-family: 'Poppins', sans-serif;
-  justify-content: space-between;
 }
 
 /* Container & Grid Layout */
@@ -58,7 +57,7 @@
   font-size: 0.95rem;
 }
 
-/* Social Icons */
+/* Social Icons - Desktop */
 .social-icons {
   display: flex;
   gap: 1rem;
@@ -242,6 +241,7 @@
 .footer-bottom {
   border-top: 1px solid #1e3a8a;
   padding: 1.5rem 0;
+  position: relative;
 }
 
 .footer-bottom-content {
@@ -270,6 +270,11 @@
   color: #3b82f6;
 }
 
+/* Mobile Social Icons Container */
+.mobile-social-icons {
+  display: none;
+}
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .footer-container {
@@ -279,10 +284,13 @@
   
   .footer-section {
     margin-bottom: 2rem;
+    text-align: center;
   }
   
   .logo-container {
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
   }
   
   .footer-description,
@@ -295,8 +303,20 @@
     justify-content: center;
   }
   
+  /* Hide desktop social icons */
   .social-icons {
+    display: none;
+  }
+  
+  /* Show mobile social icons */
+  .mobile-social-icons {
+    display: flex;
     justify-content: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+    border-top: 1px solid #1e3a8a;
   }
   
   .footer-heading::after {
@@ -313,5 +333,25 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 1rem;
+  }
+  
+  /* Adjust contact items for mobile */
+  .contact-item {
+    justify-content: center;
+  }
+  
+  /* Center newsletter form */
+  .newsletter-form {
+    align-items: center;
+  }
+  
+  .email-input {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  .subscribe-btn {
+    width: 100%;
+    max-width: 300px;
   }
 }

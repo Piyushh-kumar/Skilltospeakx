@@ -25,7 +25,7 @@
   transform: translateX(-50%);
   width: 80px;
   height: 4px;
-  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(90deg, #3498db, #2c3e50);
   border-radius: 2px;
 }
 
@@ -75,7 +75,7 @@
   justify-content: center;
   border-radius: 12px;
   margin-bottom: 1.5rem;
-  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  background: linear-gradient(135deg, #3498db, #2c3e50);
   color: white;
   font-size: 1.5rem;
 }

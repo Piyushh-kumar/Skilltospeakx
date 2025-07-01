@@ -171,7 +171,10 @@
   .contact-content {
     flex-direction: column;
   }
-  
+  .contact-container h1 {
+    font-size:1.3rem ;
+
+  }
   .contact-info, .contact-form {
     width: 100%;
   }

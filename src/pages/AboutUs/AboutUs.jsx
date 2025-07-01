@@ -1,6 +1,7 @@
+// Team.js
 import React from 'react';
 import './AboutUs.css';
-import pic1 from '../../assets/pic1.png'; // Adjust paths as needed
+import pic1 from '../../assets/pic1.png';
 import pic2 from '../../assets/pic2.png';
 import pic3 from '../../assets/pic3.png';
 import pic4 from '../../assets/pic4.png';
@@ -35,28 +36,27 @@ function Team() {
   ];
 
   return (
-    <section >
-      <div  className="team-section" >
-      <div className="container">
-        <h2 className="section-title">Our Team</h2>
-        <div className="team-grid">
-          {teamMembers.map((member, index) => (
-            <div key={index} className="team-card">
-              <div className="team-image-container">
-                <img src={member.image} alt={member.name} className="team-member-image" />
+    <section className="about-us-page">
+      <div className="team-section">
+        <div className="container">
+          <h2 className="section-title">Our Team</h2>
+          <div className="team-grid">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="team-card">
+                <div className="team-image-container">
+                  <img src={member.image} alt={member.name} className="team-member-image" />
+                </div>
+                <div className="team-card-content">
+                  <h3 className="team-member-name">{member.name}</h3>
+                  <p className="team-member-role">{member.role}</p>
+                  {member.bio && <p className="team-member-bio">{member.bio}</p>}
+                </div>
               </div>
-              <div className="team-card-content">
-                <h3 className="team-member-name">{member.name}</h3>
-                <p className="team-member-role">{member.role}</p>
-                {member.bio && <p className="team-member-bio">{member.bio}</p>}
-              </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
-      </div>
       <FoundersNote />
-     
     </section>
   );
 }

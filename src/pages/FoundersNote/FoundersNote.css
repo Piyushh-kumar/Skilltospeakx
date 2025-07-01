@@ -1,96 +1,192 @@
 /* FoundersNote.css */
-.founders-note-page {
+.founders-note-wrapper {
   min-height: 100vh;
   display: flex;
-  align-items: center;
-  padding: 4rem 0;
-  background-color: #f8f9fa;
+  flex-direction: column;
+  background-color: #f9fbfd;
+  margin-bottom: 50px; /* Added margin bottom */
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+/* Hero Section */
+.founders-note-hero {
+  height: 400px;
+  background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%); /* Updated colors */
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
   padding: 0 2rem;
 }
 
-.page-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #2c3e50;
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  color: white; /* Ensured text is white for contrast */
 }
 
-.note-card {
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+  color: white; /* Ensured text is white for contrast */
+}
+
+/* Note Card */
+.founders-note-container {
+  max-width: 1200px;
+  margin: -100px auto 50px; /* Added bottom margin */
+  padding: 0 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.founders-note-card {
   background: white;
-  border-radius: 12px;
-  padding: 3rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  max-width: 800px;
+  border-radius: 16px;
+  padding: 4rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.founders-note-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #3498db, #2c3e50); /* Updated colors */
+}
+
+.quote-mark {
+  position: absolute;
+  font-size: 8rem;
+  font-family: Georgia, serif;
+  color: rgba(52, 152, 219, 0.1); /* Updated color */
+  font-weight: bold;
+  line-height: 1;
+}
+
+.quote-mark.top {
+  top: 1rem;
+  left: 2rem;
+}
+
+.quote-mark.bottom {
+  bottom: 1rem;
+  right: 2rem;
+}
+
+.note-content {
+  max-width: 700px;
   margin: 0 auto;
 }
 
 .note-text {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   line-height: 1.8;
-  color: #555;
-  margin-bottom: 1.5rem;
+  color: #2c3e50; /* Updated color */
+  margin-bottom: 2rem;
+  position: relative;
 }
 
-.signature {
-  margin-top: 3rem;
+.signature-block {
+  margin-top: 4rem;
   text-align: right;
 }
 
-.signature-name {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: #2c3e50;
-  font-style: italic;
-  position: relative;
-  display: inline-block;
-  padding-right: 2rem;
+.signature-line {
+  width: 150px;
+  height: 2px;
+  background: linear-gradient(to right, rgba(52, 152, 219, 0.3), #3498db); /* Updated color */
+  margin-left: auto;
+  margin-bottom: 1rem;
 }
 
-.signature-name::before {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 50%;
-  width: 1.5rem;
-  height: 2px;
-  background-color: #3498db;
+.signature-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2c3e50; /* Updated color */
+  font-family: 'Brush Script MT', cursive;
+}
+
+.signature-title {
+  font-size: 1rem;
+  color: #7f8c8d; /* Adjusted for better contrast */
+  margin-top: 0.5rem;
+  letter-spacing: 1px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .page-title {
-    font-size: 2rem;
+  .founders-note-hero {
+    height: 300px;
   }
   
-  .note-card {
-    padding: 2rem;
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+  
+  .founders-note-card {
+    padding: 2.5rem;
   }
   
   .note-text {
     font-size: 1.1rem;
   }
+  
+  .quote-mark {
+    font-size: 5rem;
+  }
 }
 
 @media (max-width: 480px) {
-  .founders-note-page {
-    padding: 2rem 0;
+  .founders-note-hero {
+    height: 250px;
   }
   
-  .page-title {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
+  .hero-title {
+    font-size: 2rem;
   }
   
-  .note-card {
-    padding: 1.5rem;
+  .founders-note-card {
+    padding: 2rem 1.5rem;
+  }
+  
+  .quote-mark.top {
+    left: 1rem;
+  }
+  
+  .quote-mark.bottom {
+    right: 1rem;
   }
   
   .signature-name {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 }

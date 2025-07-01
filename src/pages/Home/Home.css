@@ -40,8 +40,8 @@
   z-index: 2;
   width: 100%;
   max-width: 1500px;
-  margin: 0 auto;
-  padding: 2rem;
+  margin-left: 10%;
+  padding: 2rem ;
 }
 
 .text-container {

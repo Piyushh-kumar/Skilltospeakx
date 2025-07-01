@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 
 function FoundersNote() {
   return (
+    <section>
     <section className="founders-note-wrapper">
       <div className="founders-note-hero">
         <div className="hero-overlay"></div>
@@ -39,7 +40,7 @@ function FoundersNote() {
           <div className="quote-mark bottom">”</div>
         </div>
       </div>
-      
+      </section>
       <Footer />
     </section>
   );

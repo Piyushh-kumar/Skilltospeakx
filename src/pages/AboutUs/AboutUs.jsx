@@ -36,6 +36,7 @@ function Team() {
   ];
 
   return (
+    <section>
     <section className="about-us-page">
       <div className="team-section">
         <div className="container">
@@ -56,6 +57,7 @@ function Team() {
           </div>
         </div>
       </div>
+      </section>
       <FoundersNote />
     </section>
   );

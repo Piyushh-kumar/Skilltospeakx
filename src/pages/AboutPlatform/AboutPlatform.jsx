@@ -1,8 +1,5 @@
 import './AboutPlatform.css';
 import platformImage from '../../assets/imagex.png';
-import visionIcon from '../../assets/ic1.svg';
-import missionIcon from '../../assets/ic2.svg';
-import goalIcon from '../../assets/ic3.svg';
 
 function AboutPlatform() {
   return (
@@ -11,25 +8,10 @@ function AboutPlatform() {
         <div className="platform-content">
           <h2 className="section-title">About the Platform</h2>
           <p className="platform-description">
-            Most students never get a chance to practice<br />
-            speaking in a structured way—we're<br />
-            changing that.
+           SkillToSpeak is an innovative platform dedicated to transforming the way individuals build and practice communication skills. Whether it's preparing for interviews, mastering group discussions, or overcoming stage fear, we provide engaging, interactive tools to help users gain confidence and clarity in their speech. Through AI-powered analysis, gamified learning experiences, and real-world practice modules, SkillToSpeak empowers students and professionals alike to express themselves with impact and authenticity. We believe that communication is not just a skill—it's a superpower, and we're here to help you unlock it.
+
+
           </p>
-          
-          <div className="platform-features">
-            <div className="feature">
-              <img src={visionIcon} alt="Vision" className="feature-icon" />
-              <h3>Vision</h3>
-            </div>
-            <div className="feature">
-              <img src={missionIcon} alt="Missions" className="feature-icon" />
-              <h3>Missions</h3>
-            </div>
-            <div className="feature">
-              <img src={goalIcon} alt="Goals" className="feature-icon" />
-              <h3>Goals</h3>
-            </div>
-          </div>
         </div>
         
         <div className="platform-image">

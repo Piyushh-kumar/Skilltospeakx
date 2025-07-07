@@ -9,10 +9,13 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import FoundersNote from './pages/FoundersNote/FoundersNote';
 import KeyFeatures from './pages/KeyFeatures/KeyFeatures';
 import Footer from './components/Footer/Footer';
+import Vision from './pages/vision/vision';
+import ScrollToTop from './components/ScrollToTop'; // Add this import
 
 function App() {
   return (
     <Router>
+      <ScrollToTop /> {/* Add this right inside Router */}
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -23,9 +26,10 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/foundersnote" element={<FoundersNote />} />
         <Route path="/keyfeatures" element={<KeyFeatures />} />
-        <Route path="/footer" element={<Footer />} />
-
+        <Route path="/vision" element={<Vision />} />
+        {/* Remove the footer route - it shouldn't be a separate page */}
       </Routes>
+      <Footer /> {/* Keep footer outside Routes */}
     </Router>
   );
 }

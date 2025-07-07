@@ -6,6 +6,7 @@
 .team-section {
   padding: 5rem 0;
   background-color: white;
+  margin-top: 60px;
 }
 
 .container {
@@ -135,7 +136,7 @@
 
 @media (max-width: 480px) {
   .team-section {
-    padding: 3rem 0;
+    padding: 1rem 0;
   }
   
   .section-title {

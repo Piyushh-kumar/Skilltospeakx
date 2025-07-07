@@ -138,7 +138,7 @@
 
 /* Success Message */
 .success-message {
-  background: #2ecc71;
+  background: #3c79c3;
   color: white;
   padding: 1rem;
   border-radius: 4px;
@@ -179,3 +179,36 @@
     width: 100%;
   }
 }
+@media (max-width: 480px) {
+  .contact-container{
+    padding-top: 0.8rem;
+  }
+  .contact-container h1 {
+    font-size: 1.5rem;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

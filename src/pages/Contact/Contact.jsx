@@ -1,16 +1,15 @@
 import { useState } from 'react';
-import { useForm, ValidationError } from '@formspree/react';
 import './Contact.css'; 
 import { FaEnvelope, FaPhone, FaMapMarkerAlt } from 'react-icons/fa';
-import Footer from '../../components/Footer/Footer';
 
 export default function Contact() {
-  const [state, handleSubmit] = useForm("xeokvvqq"); // Your Formspree form ID
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: ''
   });
+
+  const [status, setStatus] = useState({ submitted: false, submitting: false, error: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -18,6 +17,35 @@ export default function Contact() {
       ...prev,
       [name]: value
     }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus({ submitted: false, submitting: true, error: '' });
+
+    const form = new FormData();
+    form.append("access_key", "38b836b6-b0cb-4788-a1d3-cf6b5f12c094"); // 🔑 Replace with your actual key
+    form.append("name", formData.name);
+    form.append("email", formData.email);
+    form.append("message", formData.message);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: form
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus({ submitted: true, submitting: false, error: '' });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus({ submitted: false, submitting: false, error: result.message || "Something went wrong" });
+      }
+    } catch (err) {
+      setStatus({ submitted: false, submitting: false, error: "Network error. Please try again later." });
+    }
   };
 
   return (
@@ -30,7 +58,7 @@ export default function Contact() {
               <FaEnvelope className="info-icon" />
               <div>
                 <h3>Email</h3>
-                <p>contact@skilltospeak.com</p>
+                <p>hello@skilltospeak.com</p>
               </div>
             </div>
             <div className="info-item">
@@ -51,12 +79,15 @@ export default function Contact() {
           </div>
 
           <form onSubmit={handleSubmit} className="contact-form">
-            {state.succeeded && (
+            {status.submitted && (
               <div className="success-message">
                 Thank you! Your message has been sent successfully.
               </div>
             )}
-            
+            {status.error && (
+              <div className="error-message">{status.error}</div>
+            )}
+
             <div className="form-group">
               <label htmlFor="name">Name</label>
               <input
@@ -65,15 +96,10 @@ export default function Contact() {
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-              />
-              <ValidationError 
-                prefix="Name" 
-                field="name"
-                errors={state.errors}
-                className="error-message"
+                required
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="email">Email</label>
               <input
@@ -82,15 +108,10 @@ export default function Contact() {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-              />
-              <ValidationError 
-                prefix="Email" 
-                field="email"
-                errors={state.errors}
-                className="error-message"
+                required
               />
             </div>
-            
+
             <div className="form-group">
               <label htmlFor="message">Message</label>
               <textarea
@@ -99,26 +120,20 @@ export default function Contact() {
                 value={formData.message}
                 onChange={handleChange}
                 rows="5"
-              />
-              <ValidationError 
-                prefix="Message" 
-                field="message"
-                errors={state.errors}
-                className="error-message"
+                required
               />
             </div>
-            
+
             <button 
               type="submit" 
               className="submit-btn"
-              disabled={state.submitting}
+              disabled={status.submitting}
             >
-              {state.submitting ? 'Sending...' : 'Send Message'}
+              {status.submitting ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </div>
       </div>
-      <Footer />
     </section>
   );
 }

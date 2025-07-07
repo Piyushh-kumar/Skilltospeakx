@@ -7,10 +7,10 @@ function FoundersNote() {
     <section>
     <section className="founders-note-wrapper">
       <div className="founders-note-hero">
-        <div className="hero-overlay"></div>
-        <div className="hero-content">
-          <h1 className="hero-title">Founder's Vision</h1>
-          <p className="hero-subtitle">Our journey to empower voices</p>
+        <div className="heron-overlay"></div>
+        <div className="heron-content">
+          <h1 className="heron-title">Founder's Vision</h1>
+          <p className="heron-subtitle">Our journey to empower voices</p>
         </div>
       </div>
 
@@ -41,7 +41,7 @@ function FoundersNote() {
         </div>
       </div>
       </section>
-      <Footer />
+    
     </section>
   );
 }

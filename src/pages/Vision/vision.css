@@ -1,0 +1,72 @@
+.vision-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  min-height: 60vh;
+  padding: clamp(40px, 8vw, 80px); /* Fluid padding */
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* Creates a new stacking context */
+}
+
+.vision-content {
+  max-width: 600px;
+  z-index: 2; /* Ensures text stays above globe */
+}
+
+.vision-title {
+  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font */
+  font-weight: 700;
+  color: #2563eb;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.vision-title span {
+  color: #2563eb;
+}
+
+.vision-text {
+  font-size: clamp(1rem, 1.25vw, 1.25rem); /* Fluid text */
+  color: #222;
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.vision-globe {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  opacity: 0.13;
+  width: min(48vw, 600px); /* Limits max width */
+  min-width: 320px;
+  pointer-events: none;
+  z-index: 1; /* Behind text but above container */
+}
+
+/* Mobile & Tablet */
+@media (max-width: 900px) {
+  .vision-container {
+    flex-direction: column;
+    text-align: center; /* Center-align on mobile */
+    padding: 40px 5vw;
+  }
+
+  .vision-content {
+    max-width: 100%; /* Full width on small screens */
+  }
+
+  .vision-globe {
+    position: absolute; /* Keeps globe behind text */
+    opacity: 0.1; /* Slightly transparent */
+    width: 100vw; /* Full width */
+    max-width: 100%;
+    min-width: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the globe */
+    margin-top: 0;
+  }
+}

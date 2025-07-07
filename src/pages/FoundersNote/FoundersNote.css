@@ -20,7 +20,7 @@
   overflow: hidden;
 }
 
-.hero-overlay {
+.heron-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -29,14 +29,15 @@
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjA1KSIvPjwvcGF0dGVybj48L2RlZnM+PHJlY3QgZmlsbD0idXJsKCNwYXR0ZXJuKSIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIvPjwvc3ZnPg==');
 }
 
-.hero-content {
+.heron-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 0 2rem;
+
 }
 
-.hero-title {
+.heron-title {
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
@@ -44,7 +45,7 @@
   color: white; /* Ensured text is white for contrast */
 }
 
-.hero-subtitle {
+.heron-subtitle {
   font-size: 1.5rem;
   font-weight: 300;
   opacity: 0.9;
@@ -144,11 +145,11 @@
     height: 300px;
   }
   
-  .hero-title {
-    font-size: 2.5rem;
+  .heron-title {
+    font-size: 2.0rem;
   }
   
-  .hero-subtitle {
+  .heron-subtitle {
     font-size: 1.2rem;
   }
   

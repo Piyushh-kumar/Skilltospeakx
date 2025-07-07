@@ -4,7 +4,8 @@ import backgroundImage from '../../assets/Background.png';
 import About from '../AboutPlatform/AboutPlatform';
 import Features from '../Features/Features';
 import Footer from '../../components/Footer/Footer';
-import KeyFeatures from '../KeyFeatures/KeyFeatures'
+import KeyFeatures from '../KeyFeatures/KeyFeatures';
+import Vision from '../vision/vision';
 
 function Hero() {
   return (
@@ -38,6 +39,7 @@ function Hero() {
       </section>
       <About />
       <Features />
+      <Vision />
       <KeyFeatures />
       
     </div>

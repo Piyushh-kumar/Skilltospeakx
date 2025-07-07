@@ -1,49 +1,58 @@
+/* Header.css - with hdx prefix and mobile height adjustments */
+
 /* Header Container */
-.header {
-  background-color: white;
- 
-  position: sticky;
+.hdx-header {
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  width: 100%;
-  height: 100px;
-  
+  transition: all 0.4s ease;
+  background-color: transparent;
+  box-shadow: none;
+  height: 80px;
+  display: flex;
+  align-items: center;
 }
 
-.header-container {
+.hdx-header.hdx-scrolled {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  height: 70px;
+}
+
+.hdx-container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
+  width: 100%;
   max-width: 1600px;
-  margin: 0 ;
-  padding: 1rem 2rem;
-  position: relative;
-  margin-left: 3% ;
-  margin-top: 0px;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
-/* Logo Section - Updated to push to far left */
-.logo-container {
+/* Logo Section */
+.hdx-logo-container {
   display: flex;
   align-items: center;
-  margin-right: auto; /* This pushes everything else to the right */
 }
 
-.logo-link {
+.hdx-logo-link {
   display: flex;
   align-items: center;
   text-decoration: none;
   gap: 0.8rem;
+  height: 100%;
 }
 
-.logo-image {
-  height: 50px;
+.hdx-logo-image {
+  height: 40px;
   width: auto;
   border-radius: 20%;
   object-fit: contain;
 }
 
-.brand-name {
+.hdx-brand-name {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0;
@@ -52,19 +61,18 @@
   transition: color 0.3s ease;
 }
 
-.logo-link:hover .brand-name {
+.hdx-logo-link:hover .hdx-brand-name {
   color: #0066ff;
 }
 
-/* Navigation Links - Updated to be pushed to the right */
-.nav-links {
+/* Navigation Links */
+.hdx-nav-links {
   display: flex;
-  gap: 5.5rem;
+  gap: 3rem;
   align-items: center;
-  margin-left: auto; /* This pushes nav links to the right */
 }
 
-.nav-links a {
+.hdx-nav-link {
   text-decoration: none;
   color: #333;
   font-weight: 500;
@@ -72,16 +80,20 @@
   transition: all 0.3s ease;
   position: relative;
   white-space: nowrap;
+  padding: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
-.nav-links a:hover {
+.hdx-nav-link:hover {
   color: #0066ff;
 }
 
-.nav-links a::after {
+.hdx-nav-link::after {
   content: '';
   position: absolute;
-  bottom: -5px;
+  bottom: 0;
   left: 0;
   width: 0;
   height: 2px;
@@ -89,22 +101,21 @@
   transition: width 0.3s ease;
 }
 
-.nav-links a:hover::after {
+.hdx-nav-link:hover::after {
   width: 100%;
 }
 
-/* Hamburger Menu - Positioned to the right */
-.hamburger {
+/* Hamburger Menu */
+.hdx-hamburger {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
   padding: 0.5rem;
   z-index: 1001;
-  margin-left: auto; /* Ensures it stays on the right */
 }
 
-.hamburger span {
+.hdx-hamburger-line {
   display: block;
   width: 25px;
   height: 3px;
@@ -114,25 +125,24 @@
   border-radius: 3px;
 }
 
-/* Rest of your existing styles remain the same */
-.hamburger.active span {
+.hdx-hamburger.hdx-active .hdx-hamburger-line {
   background-color: #0066ff;
 }
 
-.hamburger.active span:nth-child(1) {
+.hdx-hamburger.hdx-active .hdx-hamburger-line:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
 
-.hamburger.active span:nth-child(2) {
+.hdx-hamburger.hdx-active .hdx-hamburger-line:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.hdx-hamburger.hdx-active .hdx-hamburger-line:nth-child(3) {
   transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Sidebar Overlay */
-.sidebar-overlay {
+.hdx-sidebar-overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -140,91 +150,77 @@
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  transition: all 0.5s ease;
-}
-
-.sidebar-overlay.open {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Responsive Design */
-@media (max-width: 992px) {
-  .nav-links {
-    gap: 1.5rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .header-container {
-    padding: 1rem;
-    max-width: 800px;
-   
-  }
-
-  .logo-container {
-    max-width: fit-content;
-    
-  }
-  
-  .nav-links {
-    display: none;
-  }
-
-  .hamburger {
-    display: block;
-   
-  }
-  
-  .brand-name {
-    font-size: 0.9rem;
-  }
-  
-  .logo-image {
-    height: 30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .brand-name {
-    font-size: 1.1rem;
-  }
-  
-  .logo-image {
-    height: 45px;
-  }
-}
-
-/* Transparent Header Styles */
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  transition: all 0.4s ease;
-  background-color: transparent;
-  box-shadow: none;
-  height: 70px ;
-}
-
-.header.scrolled {
-  background-color: white;
-  
-  height: 90px;
 }
 
 /* Light text for transparent header */
-.light-text {
+.hdx-light-text {
   color: white !important;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 /* Light hamburger for transparent header */
-.light-hamburger span {
+.hdx-light-hamburger .hdx-hamburger-line {
   background-color: white !important;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
-  margin-top: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .hdx-nav-links {
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hdx-header {
+    height: 60px; /* Reduced height for mobile */
+  }
+  
+  .hdx-header.hdx-scrolled {
+    height: 60px; /* Consistent height when scrolled */
+  }
+  
+  .hdx-container {
+    padding: 0 1rem;
+  }
+
+  .hdx-nav-links {
+    display: none;
+  }
+
+  .hdx-hamburger {
+    display: block;
+  }
+  
+  .hdx-brand-name {
+    font-size: 1.2rem;
+  }
+  
+  .hdx-logo-image {
+    height: 35px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hdx-header {
+    height: 60px; /* Even smaller for very small devices */
+  }
+  
+  .hdx-header.hdx-scrolled {
+    height: 60px;
+  }
+  
+  .hdx-brand-name {
+    font-size: 1rem;
+  }
+  
+  .hdx-logo-image {
+    height: 30px;
+  }
+  
+  .hdx-hamburger-line {
+    width: 20px;
+    height: 2px;
+    margin: 4px 0;
+  }
 }

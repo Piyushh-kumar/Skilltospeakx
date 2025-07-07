@@ -24,42 +24,42 @@ function Header() {
 
   return (
     <>
-      <header className={`header ${scrolled ? 'scrolled' : ''}`}>
-        <div className="header-container">
-          <div className="logo-container">
-            <Link to="/" className="logo-link">
+      <header className={`hdx-header ${scrolled ? 'hdx-scrolled' : ''}`}>
+        <div className="hdx-container">
+          <div className="hdx-logo-container">
+            <Link to="/" className="hdx-logo-link">
               <img
                 src={logoImage}
                 alt="Skill to Speak logo"
-                className="logo-image" 
+                className="hdx-logo-image" 
               />
-              <h1 className={`brand-name ${scrolled ? '' : 'light-text'}`}>SKILL TO SPEAK</h1>
+              <h1 className={`hdx-brand-name ${scrolled ? '' : 'hdx-light-text'}`}>SKILL TO SPEAK</h1>
             </Link>
           </div>
           
-          <nav className="nav-links">
-            <Link to="/" className={scrolled ? '' : 'light-text'}>Home</Link>
-            <Link to="/aboutUs" className={scrolled ? '' : 'light-text'}>About Us</Link>
-            <Link to="/keyfeatures" className={scrolled ? '' : 'light-text'}>Features</Link>
-            <Link to="/early-access" className={scrolled ? '' : 'light-text'}>Early Access</Link>
-            <Link to="/contact" className={scrolled ? '' : 'light-text'}>Contact</Link>
+          <nav className="hdx-nav-links">
+            <Link to="/" className={`hdx-nav-link ${scrolled ? '' : 'hdx-light-text'}`} onClick={() => window.scrollTo(0, 0)}>Home</Link>
+            <Link to="/aboutUs" className={`hdx-nav-link ${scrolled ? '' : 'hdx-light-text'}`} onClick={() => window.scrollTo(0, 0)}>About Us</Link>
+            <Link to="/keyfeatures" className={`hdx-nav-link ${scrolled ? '' : 'hdx-light-text'}`} onClick={() => window.scrollTo(0, 0)}>Features</Link>
+            <Link to="/early-access" className={`hdx-nav-link ${scrolled ? '' : 'hdx-light-text'}`} onClick={() => window.scrollTo(0, 0)}>Early Access</Link>
+            <Link to="/contact" className={`hdx-nav-link ${scrolled ? '' : 'hdx-light-text'}`} onClick={() => window.scrollTo(0, 0)}>Contact</Link>
           </nav>
           
           <button 
-            className={`hamburger ${sidebarOpen ? 'active' : ''} ${scrolled ? '' : 'light-hamburger'}`} 
+            className={`hdx-hamburger ${sidebarOpen ? 'hdx-active' : ''} ${scrolled ? '' : 'hdx-light-hamburger'}`} 
             onClick={toggleSidebar}
             aria-label="Menu"
           >
-            <span></span>
-            <span></span>
-            <span></span>
+            <span className="hdx-hamburger-line"></span>
+            <span className="hdx-hamburger-line"></span>
+            <span className="hdx-hamburger-line"></span>
           </button>
         </div>
       </header>
       
       <Sidebar isOpen={sidebarOpen} toggle={toggleSidebar} />
       {sidebarOpen && (
-        <div className="sidebar-overlay" onClick={toggleSidebar}></div>
+        <div className="hdx-sidebar-overlay" onClick={toggleSidebar}></div>
       )}
     </>
   );

@@ -14,7 +14,7 @@
   color: white;
   border-radius: 8px;
   margin-bottom: 2rem;
-  margin-top:1rem;
+  margin-top: 1rem;
 }
 
 .early-access-hero h1 {
@@ -124,13 +124,13 @@
   font-size: 1rem;
 }
 
-.error {
-  border-color: #e74c3c !important;
-}
-
 .error-message {
   color: #e74c3c;
-  font-size: 0.875rem;
+  background-color: #fef2f2;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .primary-btn {
@@ -142,6 +142,10 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
 }
 
 .primary-btn:hover {
@@ -158,6 +162,7 @@
   cursor: pointer;
   transition: all 0.3s;
   margin-top: 1rem;
+  width: 100%;
 }
 
 .secondary-btn:hover {
@@ -170,7 +175,17 @@
 }
 
 .success-message h2 {
-  color: #2ecc71;
+  color: #dae6df;
+  margin-bottom: 1rem;
+}
+
+.success-message p {
+  margin-bottom: 1.5rem;
+}
+
+.success-icon {
+  font-size: 3rem;
+  color: #e9eeeb;
   margin-bottom: 1rem;
 }
 
@@ -181,10 +196,22 @@
   margin-top: 1rem;
 }
 
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .early-access-content {
     flex-direction: column;
+  }
+  .early-access-container {
+    margin-top: 30px;
   }
   
   .signup-section {

@@ -9,7 +9,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import FoundersNote from './pages/FoundersNote/FoundersNote';
 import KeyFeatures from './pages/KeyFeatures/KeyFeatures';
 import Footer from './components/Footer/Footer';
-import Vision from './pages/vision/vision';
+import Vision from './pages/Vision/Vision';
 import ScrollToTop from './components/ScrollToTop'; // Add this import
 
 function App() {
@@ -27,9 +27,8 @@ function App() {
         <Route path="/foundersnote" element={<FoundersNote />} />
         <Route path="/keyfeatures" element={<KeyFeatures />} />
         <Route path="/vision" element={<Vision />} />
-        {/* Remove the footer route - it shouldn't be a separate page */}
       </Routes>
-      <Footer /> {/* Keep footer outside Routes */}
+      <Footer /> 
     </Router>
   );
 }

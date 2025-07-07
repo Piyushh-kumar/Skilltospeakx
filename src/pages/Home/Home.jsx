@@ -5,7 +5,7 @@ import About from '../AboutPlatform/AboutPlatform';
 import Features from '../Features/Features';
 import Footer from '../../components/Footer/Footer';
 import KeyFeatures from '../KeyFeatures/KeyFeatures';
-import Vision from '../vision/vision';
+import Vision from '../Vision/Vision';
 
 function Hero() {
   return (

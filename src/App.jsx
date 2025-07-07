@@ -9,7 +9,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import FoundersNote from './pages/FoundersNote/FoundersNote';
 import KeyFeatures from './pages/KeyFeatures/KeyFeatures';
 import Footer from './components/Footer/Footer';
-import Vision from './pages/Vision/Vision';
+import Vision from './pages/Vision/Vision.jsx';
 import ScrollToTop from './components/ScrollToTop'; // Add this import
 
 function App() {

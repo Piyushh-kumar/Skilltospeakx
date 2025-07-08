@@ -6,7 +6,7 @@ import Features from '../Features/Features';
 import Footer from '../../components/Footer/Footer';
 import KeyFeatures from '../KeyFeatures/KeyFeatures';
 import OurVision from '../OurVision/OurVision';
-import QuotePage from '../QuotePage/QuotePage';
+import QuotePage from '../QuotePagex/QuotePagex';
 
 function Hero() {
   return (

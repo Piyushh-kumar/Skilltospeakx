@@ -28,7 +28,7 @@ function App() {
         <Route path="/foundersnote" element={<FoundersNote />} />
         <Route path="/keyfeatures" element={<KeyFeatures />} />
         <Route path="/OurVision" element={<OurVision />} />
-        <Route path="/quotePagex" element={<QuotePage />} />   
+        <Route path="/quotePagex" element={<QuotePagex />} />   
          </Routes>
       <Footer /> 
     </Router>

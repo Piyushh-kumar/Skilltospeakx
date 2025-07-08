@@ -1,6 +1,6 @@
 import React from 'react';
 import './FoundersNote.css';
-import Footer from '../../components/Footer/Footer';
+
 
 function FoundersNote() {
   return (

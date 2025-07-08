@@ -11,12 +11,12 @@ import KeyFeatures from './pages/KeyFeatures/KeyFeatures';
 import Footer from './components/Footer/Footer';
 import OurVision from './pages/OurVision/OurVision';
 import QuotePagex from './pages/QuotePagex/QuotePagex';
-import ScrollToTop from './components/ScrollToTop'; // Add this import
+import ScrollToTop from './components/ScrollToTop'; 
 
 function App() {
   return (
     <Router>
-      <ScrollToTop /> {/* Add this right inside Router */}
+      <ScrollToTop /> 
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -29,7 +29,7 @@ function App() {
         <Route path="/keyfeatures" element={<KeyFeatures />} />
         <Route path="/OurVision" element={<OurVision />} />
         <Route path="/quotePagex" element={<QuotePagex />} />   
-         </Routes>
+        </Routes>
       <Footer /> 
     </Router>
   );

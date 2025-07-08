@@ -5,7 +5,7 @@ import About from '../AboutPlatform/AboutPlatform';
 import Features from '../Features/Features';
 import Footer from '../../components/Footer/Footer';
 import KeyFeatures from '../KeyFeatures/KeyFeatures';
-import Vision from 'src\pages\Vision\Vision.jsx';
+import OurVision from '../OurVision/OurVision';
 
 function Hero() {
   return (
@@ -39,7 +39,7 @@ function Hero() {
       </section>
       <About />
       <Features />
-      <Vision />
+      <OurVision />
       <KeyFeatures />
       
     </div>

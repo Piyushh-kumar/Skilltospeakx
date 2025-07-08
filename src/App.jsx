@@ -9,7 +9,7 @@ import AboutUs from './pages/AboutUs/AboutUs';
 import FoundersNote from './pages/FoundersNote/FoundersNote';
 import KeyFeatures from './pages/KeyFeatures/KeyFeatures';
 import Footer from './components/Footer/Footer';
-import Vision from 'src\pages\Vision\Vision.jsx';
+import OurVision from './pages/OurVision/OurVision';
 import ScrollToTop from './components/ScrollToTop'; // Add this import
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/aboutus" element={<AboutUs />} />
         <Route path="/foundersnote" element={<FoundersNote />} />
         <Route path="/keyfeatures" element={<KeyFeatures />} />
-        <Route path="/vision" element={<Vision />} />
+        <Route path="/OurVision" element={<OurVision />} />
       </Routes>
       <Footer /> 
     </Router>

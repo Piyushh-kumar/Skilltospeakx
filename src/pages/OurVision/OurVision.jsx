@@ -1,5 +1,5 @@
 import React from "react";
-import "./Vision.css";
+import "./OurVision.css";
 import globe from '../../assets/globe.png';
 
 const OurVision = () => {

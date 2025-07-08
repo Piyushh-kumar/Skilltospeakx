@@ -192,3 +192,29 @@
     transition-delay: 0.1s !important; 
   }
 }
+
+
+
+/* (Keep all your existing styles) */
+
+/* Add this new rule at the bottom */
+.kf-mobile-indicator {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  font-size: 14px;
+  opacity: 0.7;
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .kf-mobile-indicator {
+    display: block;
+  }
+  
+  .kf-card:hover .kf-mobile-indicator,
+  .kf-card:active .kf-mobile-indicator {
+    opacity: 1;
+  }
+}

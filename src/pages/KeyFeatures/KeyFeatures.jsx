@@ -100,6 +100,7 @@ const KeyFeatures = () => {
               <div className="kf-card-content">
                 <h3 className="kf-card-title">{feature.title}</h3>
                 <p className="kf-card-description">{feature.description}</p>
+                <div className="kf-mobile-indicator">▼</div>
               </div>
             </div>
           ))}

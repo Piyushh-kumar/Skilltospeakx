@@ -5,7 +5,7 @@ import About from '../AboutPlatform/AboutPlatform';
 import Features from '../Features/Features';
 import Footer from '../../components/Footer/Footer';
 import KeyFeatures from '../KeyFeatures/KeyFeatures';
-import Vision from '../Vision/Vision';
+import Vision from 'src\pages\Vision\Vision.jsx';
 
 function Hero() {
   return (

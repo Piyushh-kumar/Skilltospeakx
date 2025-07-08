@@ -40,7 +40,7 @@ function Hero() {
       </section>
       <About />
       <Features />
-      <OurVision />
+      <KeyFeatures />
       <QuotePage />
       
       

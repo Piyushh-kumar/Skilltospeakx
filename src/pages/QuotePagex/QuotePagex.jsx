@@ -1,5 +1,5 @@
 import React from 'react';
-import './QuotePagex.css';
+import './Quote.css';
 import quoteImage from '../../assets/quote.jpg'; 
 
 function QuotePage() {

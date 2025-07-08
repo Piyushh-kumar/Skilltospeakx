@@ -111,6 +111,9 @@
 }
 
 /* Links Section */
+.ft-links-section {
+  padding-left: 4rem;
+}
 .ft-links-list {
   list-style: none;
   padding: 0;
@@ -121,6 +124,7 @@
 
 .ft-link-item {
   margin-bottom: 0.3rem;
+  
 }
 
 .ft-link {
@@ -339,7 +343,7 @@
   margin: 0;
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments - Desktop version remains unchanged */
 @media (max-width: 1024px) {
   .ft-container {
     grid-template-columns: repeat(2, 1fr);
@@ -363,14 +367,16 @@
     padding: 0;
   }
   
+  /* Keep logo and name on same line for mobile */
   .ft-logo-container {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
+    justify-content: center;
   }
   
   .ft-logo-img {
-    margin-right: 0;
-    margin-bottom: 0.8rem;
+    margin-right: 12px;
+    margin-bottom: 0;
   }
   
   .ft-heading::after {
@@ -388,6 +394,11 @@
   
   .ft-contact-icon {
     margin-top: 0;
+  }
+  
+  /* Reduce vertical distance between links */
+  .ft-links-list {
+    gap: 0.3rem;
   }
   
   .ft-social-icons {
@@ -421,4 +432,14 @@
   .ft-subscribe-btn,
   .ft-secondary-btn {
     font-size: 0.85rem;
-  } }
+  }
+  
+  /* Further reduce vertical distance between links for smallest screens */
+  .ft-links-list {
+    gap: 0.2rem;
+  }
+  
+  .ft-link-item {
+    margin-bottom: 0.1rem;
+  }
+}

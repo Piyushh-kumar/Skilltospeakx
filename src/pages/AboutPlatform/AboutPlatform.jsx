@@ -8,10 +8,7 @@ function AboutPlatform() {
         <div className="platform-content">
           <h2 className="section-title">About the Platform</h2>
           <p className="platform-description">
-           SkillToSpeak is an innovative platform dedicated to transforming the way individuals build and practice communication skills. Whether it's preparing for interviews, mastering group discussions, or overcoming stage fear, we provide engaging, interactive tools to help users gain confidence and clarity in their speech. Through AI-powered analysis, gamified learning experiences, and real-world practice modules, SkillToSpeak empowers students and professionals alike to express themselves with impact and authenticity. We believe that communication is not just a skill—it's a superpower, and we're here to help you unlock it.
-
-
-          </p>
+SkilltoSpeak is a dynamic platform that helps individuals build strong communication skills through interactive tools and AI-powered feedback. From interview prep to group discussions and stage confidence, we offer gamified learning and real-world practice to help users speak with clarity, confidence, and impact. Communication is a superpower—and we’re here to help you unlock it.</p>
         </div>
         
         <div className="platform-image">

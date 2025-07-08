@@ -6,6 +6,7 @@ import Features from '../Features/Features';
 import Footer from '../../components/Footer/Footer';
 import KeyFeatures from '../KeyFeatures/KeyFeatures';
 import OurVision from '../OurVision/OurVision';
+import QuotePage from '../QuotePage/QuotePage';
 
 function Hero() {
   return (
@@ -40,7 +41,8 @@ function Hero() {
       <About />
       <Features />
       <OurVision />
-      <KeyFeatures />
+      <QuotePage />
+      
       
     </div>
   );

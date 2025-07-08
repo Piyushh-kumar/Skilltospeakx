@@ -4,6 +4,7 @@ import globe from '../../assets/globe.png';
 
 const OurVision = () => {
   return (
+    <div class="our-vision">
     <div className="vision-container">
       <div className="vision-content">
         <h1 className="vision-title">Our <span>Vision</span></h1>
@@ -12,6 +13,7 @@ const OurVision = () => {
         </p>
       </div>
       <img src={globe} alt="Decorative globe" className="vision-globe" />
+    </div>
     </div>
   );
 };

@@ -3,35 +3,45 @@
   align-items: center;
   justify-content: space-between;
   background: #fff;
-  min-height: 60vh;
-  padding: clamp(40px, 8vw, 80px); /* Fluid padding */
+  min-height: 50vh;
+  padding: clamp(30px, 5vw, 60px);
   position: relative;
   overflow: hidden;
-  isolation: isolate; /* Creates a new stacking context */
+  isolation: isolate;
+  padding-left: 10rem;
+ 
 }
+
+.our-vision {
+  padding-bottom: 2rem;
+}
+
+
 
 .vision-content {
   max-width: 600px;
-  z-index: 2; /* Ensures text stays above globe */
+  z-index: 2;
 }
 
 .vision-title {
-  font-size: clamp(2rem, 5vw, 3rem); /* Responsive font */
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   color: #2563eb;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   line-height: 1.2;
 }
 
 .vision-title span {
   color: #2563eb;
+  display: inline-block;
 }
 
 .vision-text {
-  font-size: clamp(1rem, 1.25vw, 1.25rem); /* Fluid text */
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
   color: #222;
   line-height: 1.7;
   font-weight: 400;
+  max-width: 90%;
 }
 
 .vision-globe {
@@ -40,33 +50,101 @@
   top: 50%;
   transform: translateY(-50%);
   opacity: 0.13;
-  width: min(48vw, 600px); /* Limits max width */
+  width: min(48vw, 600px);
   min-width: 320px;
   pointer-events: none;
-  z-index: 1; /* Behind text but above container */
+  z-index: 1;
+  transition: all 0.3s ease;
 }
 
-/* Mobile & Tablet */
+/* Tablet */
+@media (max-width: 1024px) {
+  .vision-globe {
+    width: min(55vw, 500px);
+    opacity: 0.1;
+    right: -5%;
+  }
+  
+  .vision-text {
+    max-width: 100%;
+  }
+}
+
+/* Mobile */
 @media (max-width: 900px) {
   .vision-container {
     flex-direction: column;
-    text-align: center; /* Center-align on mobile */
+    text-align: center;
     padding: 40px 5vw;
+    min-height: 40vh;
+    justify-content: center;
   }
 
   .vision-content {
-    max-width: 100%; /* Full width on small screens */
+    max-width: 100%;
+    z-index: 3;
+  }
+
+  .vision-title {
+    margin-bottom: 1.2rem;
+  }
+
+  .vision-text {
+    font-size: clamp(1rem, 1.1vw, 1.1rem);
+    max-width: 100%;
+    padding: 0 5%;
   }
 
   .vision-globe {
-    position: absolute; /* Keeps globe behind text */
-    opacity: 0.1; /* Slightly transparent */
-    width: 100vw; /* Full width */
-    max-width: 100%;
-    min-width: auto;
-    top: 50%;
+    width: 100vw;
+    height: 100%;
+    max-height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.08;
+    top: 55%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centers the globe */
-    margin-top: 0;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .vision-container {
+    padding: 30px 5vw;
+    min-height: 35vh;
+  }
+  
+  .vision-title {
+    font-size: clamp(1.8rem, 6vw, 2.2rem);
+    margin-bottom: 1rem;
+  }
+  
+  .vision-text {
+    font-size: 1rem;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  .vision-globe {
+    max-height: 45vh;
+    opacity: 0.07;
+    top: 60%;
+  }
+}
+
+/* Very Small Mobile */
+@media (max-width: 360px) {
+  .vision-container {
+    min-height: 30vh;
+  }
+  
+  .vision-title {
+    font-size: 1.6rem;
+  }
+  
+  .vision-globe {
+    max-height: 40vh;
   }
 }

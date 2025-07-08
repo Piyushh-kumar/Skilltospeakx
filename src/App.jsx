@@ -10,6 +10,7 @@ import FoundersNote from './pages/FoundersNote/FoundersNote';
 import KeyFeatures from './pages/KeyFeatures/KeyFeatures';
 import Footer from './components/Footer/Footer';
 import OurVision from './pages/OurVision/OurVision';
+import QuotePage from './pages/QuotePage/QuotePage';
 import ScrollToTop from './components/ScrollToTop'; // Add this import
 
 function App() {
@@ -27,7 +28,8 @@ function App() {
         <Route path="/foundersnote" element={<FoundersNote />} />
         <Route path="/keyfeatures" element={<KeyFeatures />} />
         <Route path="/OurVision" element={<OurVision />} />
-      </Routes>
+        <Route path="/QuotePage" element={<QuotePage />} />   
+         </Routes>
       <Footer /> 
     </Router>
   );

@@ -25,7 +25,7 @@ function FoundersNote() {
             </p>
             
             <p className="note-text">
-              At Skill-to-Speak, we're bridging that gap with a voice-first platform 
+              At Skill to Speak, we're bridging that gap with a voice-first platform 
               that helps every student practice, progress, and speak with clarity — 
               one level, one task at a time.
             </p>
@@ -33,7 +33,7 @@ function FoundersNote() {
           
           <div className="signature-block">
             <div className="signature-line"></div>
-            <p className="signature-name">The Skill-to-Speak Team</p>
+            <p className="signature-name">The Skill to Speak Team</p>
             <p className="signature-title">Founders</p>
           </div>
           

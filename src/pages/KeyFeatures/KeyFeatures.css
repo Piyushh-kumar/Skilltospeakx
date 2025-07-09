@@ -1,8 +1,9 @@
 .kf-section {
   padding: 4rem 2rem;
-  max-width: 1400px;
+  max-width: 100%;
   margin: 0 auto;
-  margin-top: 25px;
+ 
+  
   overflow: hidden;
   background-color: #f8f9fa;
 }
@@ -21,6 +22,7 @@
   transform: translateY(20px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   font-weight: 700;
+  margin-top: 25px;
 }
 
 .kf-heading.kf-visible {
@@ -44,6 +46,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  padding: 2rem;
 }
 
 .kf-card {
@@ -160,6 +163,7 @@
   
   .kf-card {
     height: 220px;
+    padding: 0rem;
   }
   
   .kf-card:nth-child(odd) { transition-delay: 0.1s; }
@@ -210,10 +214,12 @@
 @media (max-width: 640px) {
   .kf-grid {
     grid-template-columns: 1fr;
+    padding: 0%;
   }
   
   .kf-card {
     height: 200px;
+  
   }
   
   .kf-heading {
@@ -236,6 +242,7 @@
 @media (max-width: 400px) {
   .kf-card {
     height: 180px;
+    
   }
 
   .kf-card-title {

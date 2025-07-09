@@ -85,6 +85,7 @@ const KeyFeatures = () => {
   }, []);
 
   return (
+    <div className="kfbox">
     <section ref={sectionRef} className="kf-section">
       <div className="kf-container">
         <h2 className="kf-heading" ref={headingRef}>Key Features</h2>
@@ -107,6 +108,7 @@ const KeyFeatures = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

@@ -20,7 +20,7 @@
   margin-bottom: 1.25rem;
   color: #333;
   line-height: 1.3;
-  text-align: left;
+  text-align: center;
 }
 
 .platform-description {
@@ -29,12 +29,14 @@
   color: #555;
   max-width: 90%;
   text-align: left;
+  margin-left: 3rem;
 }
 
 .platform-image {
   flex: 1;
   display: flex;
   align-items: center;
+  margin-left: 5rem;
 }
 
 .platform-image img {
@@ -68,6 +70,9 @@
   .about-platform {
     padding: 3rem 1rem;
   }
+  .platform-image {
+    margin-left: 0rem;
+  }
   
   .platform-container {
     flex-direction: column-reverse; /* Image first on mobile */
@@ -77,6 +82,7 @@
   .platform-description {
     max-width: 100%;
     text-align: center; /* Center text on mobile */
+    margin-left: 0rem;
   }
   
   .section-title {
@@ -88,6 +94,7 @@
     max-height: 300px;
     width: 80%;
     margin: 0 auto;
+    margin-left: 0rem;
   }
 }
 

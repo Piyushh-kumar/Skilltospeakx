@@ -10,6 +10,7 @@ import QuotePage from '../QuotePagex/QuotePagex';
 
 function Hero() {
   return (
+    <section>
     <div className="home-container">
       <section className="hero" style={{ backgroundImage: `url(${backgroundImage})` }}>
         <div className="hero-content">
@@ -38,13 +39,12 @@ function Hero() {
           </div>
         </div>
       </section>
-      <About />
+    </div>
+    <About />
       <Features />
       <KeyFeatures />
       <QuotePage />
-      
-      
-    </div>
+    </section>
   );
 }
 

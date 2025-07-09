@@ -144,6 +144,9 @@
   .founders-note-hero {
     height: 300px;
   }
+  .founders-note-wrapper {
+    margin-bottom: 5px;
+  }
   
   .heron-title {
     font-size: 2.0rem;
@@ -170,13 +173,16 @@
   .founders-note-hero {
     height: 250px;
   }
-  
+    .founders-note-wrapper {
+    margin-bottom: 5px;
+  }
   .hero-title {
     font-size: 2rem;
   }
   
   .founders-note-card {
     padding: 2rem 1.5rem;
+   
   }
   
   .quote-mark.top {

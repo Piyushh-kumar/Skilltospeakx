@@ -101,18 +101,6 @@
   margin: 0 auto;
 }
 
-.mission-image {
-  width: 100%;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.mission-image:hover {
-  transform: scale(1.02);
-}
 
 .mission-text {
   font-size: 1.1rem;
@@ -154,24 +142,11 @@
   min-width: 300px;
   font-size: 1.1rem;
   line-height: 1.8;
-  text-align: left;
+  text-align: center;
   color: #ffffff;
   opacity: 0.95;
 }
 
-.vision-image {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.vision-image:hover {
-  transform: scale(1.02);
-}
 
 /* Features Section */
 .features {
@@ -272,14 +247,6 @@
   background: rgba(216, 251, 90, 0.1);
   border-color: #d8fb5a;
   transform: translateY(-5px);
-}
-
-.partner-logo {
-  max-width: 100%;
-  height: auto;
-  max-height: 80px;
-  object-fit: contain;
-  margin-bottom: 1rem;
 }
 
 .partner-name {
@@ -388,10 +355,6 @@
     flex-direction: column;
   }
 
-  .mission-image,
-  .vision-image {
-    max-width: 100%;
-  }
 
   .mission-text,
   .vision-text {
